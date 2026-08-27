@@ -32,7 +32,7 @@
 //     str+="*";
 //  }
 //  console.log(str);
-// } op=
+// } //op=
 // *
 // **
 // ***
@@ -72,13 +72,22 @@
 // ***
 // **
 // *
-let n=3;
-for(let row=n; row>=1; row--){
- let str ="";
- for(let col=1; col<=2*row-1; col++){
-    str+="*";
- }
- console.log(str);
-}
+// let n=3;
+// for(let row=n; row>=1; row--){
+//  let str ="";
+//  for(let col=1; col<=2*row-1; col++){
+//     str+="*";
+//  }
+//  console.log(str);
+// }
 
-// apprpoach 2
+//apprpoach 2
+// let n = 8;
+// for(row=1; row<=n; row++){
+//    let str ="";
+//    for(let col=1; col<=2*(n-row+1)-1; col++){
+//       str+="*";
+//    }
+// console.log(str);
+// }
+
