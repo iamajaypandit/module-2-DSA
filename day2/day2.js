@@ -350,13 +350,19 @@
 // }
 
 // matrix 
-let matrix = [
-    [1, 2, 3,4],
-    [5, 6, 7,8],
-    [9, 10, 11,12],
-    [5,4,6,9]
-];
-// given asquare matrix print the daigonals items 
-for(let i =0; i<matrix.length; i++){    
-    console.log(matrix[i][i]);
-}
+// let matrix = [
+//     [1, 2, 3,4],
+//     [5, 6, 7,8],
+//     [9, 10, 11,12],
+//     [5,4,6,9]
+// ];
+// // given asquare matrix print the daigonals items 
+// for(let i =0; i<matrix.length; i++){    
+//     console.log(matrix[i][i]);
+// }
+
+
+// // print the secondary diagonal items
+// for(let i =0; i<matrix.length; i++){
+//     console.log(matrix[i][matrix.length-1-i]);
+// }
