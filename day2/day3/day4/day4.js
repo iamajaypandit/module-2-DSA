@@ -30,7 +30,7 @@
 //         }
 //     }
 // } 
-// print the irregular  array column wise from right to left
+//print the irregular  array column wise from right to left
 // for (let col = arr[0].length-1; col >= 0; col--) {
 //     for (let row = 0; row < arr.length; row++) {    
 //         if(arr[row][col] !== undefined){
@@ -45,7 +45,7 @@
 //     [9,10,11,12],
 //     [13,14,15,16]
 // ]
-// // print the boundary elements of the matrix
+// print the boundary elements of the matrix
 // for(let i =0; i<matrix.length; i++){
 //     for(let j =0; j<matrix[i].length; j++){
 //         if(i==0 || i==matrix.length-1 || j==0 || j==matrix[i].length-1){
@@ -85,10 +85,7 @@
 //     [5,6,14],
 //     [9,10,11]
 // ]
-// print the square matrix print the secondary diagonal items
-// for(let i =0; i<matrix.length; i++){
-//     console.log(matrix[i][matrix.length-1-i]);
-// }
+
 
 // for(let row =0; row<matrix.length; row++){
 //     for(let col=0; col<matrix[row].length; col++){
@@ -106,21 +103,37 @@
 //     }
 // }
 
-let mat = [
-    [1,2,3],
-    [5,6,14],
-    [9,10,11]
+// let mat = [
+//     [1,2,3],
+//     [5,6,14],
+//     [9,10,11]
+// ]
+// // print the transpose of the matrix
+// for(let row =0; row<mat.length; row++){
+//     for(let col=0; col<mat[row].length; col++){
+//         if(row<col){
+//         let temp  = mat[row][col];
+//         mat[row][col] = mat[col][row];
+//         mat[col][row] = temp;
+//         }
+//     }
+// }   
+//  console.log(mat);
+// what if matrix is square 
+let transpose = [
+    [1,4,7,1],
+    [2,5,8,0],
+    [3,6,9,5],
 ]
-// print the transpose of the matrix
-for(let row =0; row<mat.length; row++){
-    for(let col=0; col<mat[row].length; col++){
+for(let row =0; row<transpose.length; row++){
+    for(let col=0; col<transpose[row].length; col++){
         if(row<col){
-        let temp  = mat[row][col];
-        mat[row][col] = mat[col][row];
-        mat[col][row] = temp;
+        let temp  = transpose[row][col];
+        transpose[row][col] = transpose[col][row];
+        transpose[col][row] = temp;
         }
-    }
-}   
- console.log(mat);
+    }   
+}
+
 
 
