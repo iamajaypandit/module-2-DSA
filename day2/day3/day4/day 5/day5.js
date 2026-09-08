@@ -36,11 +36,11 @@
     // zig zag traversal 
 
     // boundary traversal 
-    let mat = [
-        [1,4,7,1],
-        [2,5,8,0],
-        [3,6,9,5]
-    ]
+    // let mat = [
+    //     [1,4,7,1],
+    //     [2,5,8,0],
+    //     [3,6,9,5]
+    // ]
 
 // let result = [];
 // let top = 0;
@@ -118,27 +118,71 @@
 //   console.log(subarray);
 //   }
 
-  // given a string find all the substring of length k 
-  let str = "Akash";
-  let k=2;
-  for(let i =0; i<str.length-k+1; i++){
-    let subarray=[];
-  for(let j =i; j<i+k; j++){
-    subarray.push(str[j]);
-  }
-  console.log(subarray);
-  }
+// given a string find all the substring of length k 
+//   let str = "Akash";
+//   let k=2;
+//   for(let i =0; i<str.length-k+1; i++){
+//     let subarray=[];
+//   for(let j =i; j<i+k; j++){
+//     subarray.push(str[j]);
+//   }
+//   console.log(subarray);
+//   }
 
-  // find all the total no of the subarraya and print them 
-  let arr = [1,2,3,4,5];
-let count = 0;
-for (let i = 0; i < arr.length; i++) {
-    let subarray = [];
-  for (let j = i; j <arr.length; j++) {
-     subarray.push(arr[j]);
-    console.log(subarray);
-    count++;
-  }
+//   // find all the total no of the subarraya and print them 
+//   let arr = [1,2,3,4,5];
+// let count = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     let subarray = [];
+//   for (let j = i; j <arr.length; j++) {
+//      subarray.push(arr[j]);
+//     console.log(subarray);
+//     count++;
+//   }
+// }
+
+// console.log("Total number of subarrays:", count);
+
+
+
+// spiral matrix
+ let mat = [
+    [1,2,3,4,5],
+    [5,6,14,7,3],
+    [9,7,11,13,53],
+    [4,56,32,54,22]
+]
+
+
+let result = [];
+let top = 0;
+let bottom = mat.length - 1;
+let left = 0;
+let right = mat[0].length - 1;
+
+while (top <= bottom && left <= right) {
+
+    // left to right
+    for (let k = left; k <= right; k++) {
+        console.log(mat[top][k]);
+    }
+    top++;
+
+    // top to bottom
+    for (let k = top; k <= bottom; k++) {
+        console.log(mat[k][right]);
+    }
+    right--;
+
+    // right to left
+    for (let k = right; k >= left; k--) {
+        console.log(mat[bottom][k]);
+    }
+    bottom--;
+
+    // bottom to top
+    for (let k = bottom; k >= top; k--) {
+        console.log(mat[k][left]);
+    }
+    left++;
 }
-
-console.log("Total number of subarrays:", count);

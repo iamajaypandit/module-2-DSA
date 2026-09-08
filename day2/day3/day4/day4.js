@@ -80,28 +80,28 @@
 // }
 // console.log("Max value in the matrix:", max);
 
-// let matrix = [
-//     [1,2,3],
-//     [5,6,14],
-//     [9,10,11]
-// ]
+let matrix = [
+    [1,2,3],
+    [5,6,14],
+    [9,10,11]
+]
 
 
-// for(let row =0; row<matrix.length; row++){
-//     for(let col=0; col<matrix[row].length; col++){
-//         if(row+col == matrix.length-1)
-//             console.log(matrix[row][col]);
-//     }
-// }
+for(let row =0; row<matrix.length; row++){
+    for(let col=0; col<matrix[row].length; col++){
+        if(row+col == matrix.length-1)
+            console.log(matrix[row][col]);
+    }
+}
 
 
-// print the items of the secondary daigonal from bottom to top
-// for(let row =matrix.length-1; row>=0; row--){
-//     for(let col=0; col<matrix[row].length; col++){
-//         if(row+col == matrix.length-1)       
-//         console.log(matrix[row][col]);
-//     }
-// }
+//print the items of the secondary daigonal from bottom to top
+for(let row =matrix.length-1; row>=0; row--){
+    for(let col=0; col<matrix[row].length; col++){
+        if(row+col == matrix.length-1)       
+        console.log(matrix[row][col]);
+    }
+}
 
 // let mat = [
 //     [1,2,3],
@@ -120,20 +120,20 @@
 // }   
 //  console.log(mat);
 // what if matrix is square 
-let transpose = [
-    [1,4,7,1],
-    [2,5,8,0],
-    [3,6,9,5],
-]
-for(let row =0; row<transpose.length; row++){
-    for(let col=0; col<transpose[row].length; col++){
-        if(row<col){
-        let temp  = transpose[row][col];
-        transpose[row][col] = transpose[col][row];
-        transpose[col][row] = temp;
-        }
-    }   
-}
+// let transpose = [
+//     [1,4,7,1],
+//     [2,5,8,0],
+//     [3,6,9,5],
+// ]
+// for(let row =0; row<transpose.length; row++){
+//     for(let col=0; col<transpose[row].length; col++){
+//         if(row<col){
+//         let temp  = transpose[row][col];
+//         transpose[row][col] = transpose[col][row];
+//         transpose[col][row] = temp;
+//         }
+//     }   
+// }
 
 
 
