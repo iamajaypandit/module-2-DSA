@@ -36,7 +36,7 @@
  // 1sec = 10^8 operations 
   //1 op = 1/10^8
 
-// linear search ->o(n)
+// linear search ->o(n) 
 // binary search -> o(log2(n))
 
 // binary search 
