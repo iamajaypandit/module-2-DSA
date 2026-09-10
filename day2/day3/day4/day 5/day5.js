@@ -145,47 +145,47 @@
 
 
 
-// spiral matrix
-//  let mat = [
-//     [1,2,3,4,5],
-//     [5,6,14,7,3],
-//     [9,7,11,13,53],
-//     [4,56,32,54,22]
-// ]
+//spiral matrix
+ let mat = [
+    [1,2,3,4,5],
+    [5,6,14,7,3],
+    [9,7,11,13,53],
+    [4,56,32,54,22]
+]
 
 
-// let result = [];
-// let top = 0;
-// let bottom = mat.length - 1;
-// let left = 0;
-// let right = mat[0].length - 1;
+let result = [];
+let top = 0;
+let bottom = mat.length - 1;
+let left = 0;
+let right = mat[0].length - 1;
 
-// while (top <= bottom && left <= right) {
+while (top <= bottom && left <= right) {
 
-//     // left to right
-//     for (let k = left; k <= right; k++) {
-//         console.log(mat[top][k]);
-//     }
-//     top++;
+    // left to right
+    for (let k = left; k <= right; k++) {
+        console.log(mat[top][k]);
+    }
+    top++;
 
-//     // top to bottom
-//     for (let k = top; k <= bottom; k++) {
-//         console.log(mat[k][right]);
-//     }
-//     right--;
+    // top to bottom
+    for (let k = top; k <= bottom; k++) {
+        console.log(mat[k][right]);
+    }
+    right--;
 
-//     // right to left
-//     for (let k = right; k >= left; k--) {
-//         console.log(mat[bottom][k]);
-//     }
-//     bottom--;
+    // right to left
+    for (let k = right; k >= left; k--) {
+        console.log(mat[bottom][k]);
+    }
+    bottom--;
 
-//     // bottom to top
-//     for (let k = bottom; k >= top; k--) {
-//         console.log(mat[k][left]);
-//     }
-//     left++;
-// }
+    // bottom to top
+    for (let k = bottom; k >= top; k--) {
+        console.log(mat[k][left]);
+    }
+    left++;
+}
 
 // zig zag matrix
 
