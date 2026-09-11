@@ -128,42 +128,71 @@
  // S.c = o(n)
 
  // question 
- let arr =[
-    {
-        name:"ajay",
-        city:"lucknow"
-    },
-    {
-        name:"abhi",
-        city:"pune"
-    },
-    {
-        name:"adit",
-        city:"delhi"
-    },
-    {
-        name:"ankit",
-        city:"lucknow"
-    }
- ]
+//  let arr =[
+//     {
+//         name:"ajay",
+//         city:"lucknow"
+//     },
+//     {
+//         name:"abhi",
+//         city:"pune"
+//     },
+//     {
+//         name:"adit",
+//         city:"delhi"
+//     },
+//     {
+//         name:"ankit",
+//         city:"lucknow"
+//     }
+//  ]
  // group by city
- let mp = new Map();
- for(let item of arr){
-  if(mp.has(item.city)==false){
-    mp.set(item.city,[item.name]);
-  }
-  else{
-    let names=mp.get(item.city);
-    names.push(item.name);
-    mp.set(item.city,names);
-  }
- }
- console.log(mp);
+ //let mp = new Map();
+//  for(let item of arr){
+//   if(mp.has(item.city)==false){
+//     mp.set(item.city,[item.name]);
+//   }
+//   else{
+//     let names=mp.get(item.city);
+//     names.push(item.name);
+//     mp.set(item.city,names);
+//   }
+//  }
+//  console.log(mp);
 
  // HW 
- let arr1 = [2,3,4,5];
- let arr2= [4,5,2,6];
+
  // given two array print true if there is common item between the both arrays
  // otherwise print false
+//  let arr1 = [2,3,4,5];
+//  let arr2= [4,5,2,6];
+//  function containsDuplicate(arr1, arr2){
+//  let set =new set();
+//  for(let item of arr2){
+//     st.add(item);
+//  }
+//  for(let i =0; i<arr1.length; i++){
+//     if(st.has(arr1[i])){
+//         return true;
+//      }
+//    }
+// return false;
+//  }
+//  console.log(containsDuplicate(arr1,arr2));
+ // Time Complexity = o(n+m)
+ 
+
+ // Recursion - function call itself
+ // tail
+ //head 
+ //tree
+
+ function print1toN(n){
+    if(n<1) return;
+    print1toN(n-1);
+    console.log(n);
+ }
+ print(5);
+
 
 
