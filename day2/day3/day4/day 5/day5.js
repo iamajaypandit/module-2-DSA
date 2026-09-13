@@ -146,78 +146,110 @@
 
 
 //spiral matrix
- let mat = [
-    [1,2,3,4,5],
-    [5,6,14,7,3],
-    [9,7,11,13,53],
-    [4,56,32,54,22]
-]
-
-
-let result = [];
-let top = 0;
-let bottom = mat.length - 1;
-let left = 0;
-let right = mat[0].length - 1;
-
-while (top <= bottom && left <= right) {
-
-    // left to right
-    for (let k = left; k <= right; k++) {
-        console.log(mat[top][k]);
-    }
-    top++;
-
-    // top to bottom
-    for (let k = top; k <= bottom; k++) {
-        console.log(mat[k][right]);
-    }
-    right--;
-
-    // right to left
-    for (let k = right; k >= left; k--) {
-        console.log(mat[bottom][k]);
-    }
-    bottom--;
-
-    // bottom to top
-    for (let k = bottom; k >= top; k--) {
-        console.log(mat[k][left]);
-    }
-    left++;
-}
-
-// zig zag matrix
-
-// let mat= [
-// [7,2,3],
-// [2 ,3, 4],
-// [5 ,6, 1]
+//  let mat = [
+//     [1,2,3,4,5],
+//     [5,6,14,7,3],
+//     [9,7,11,13,53],
+//     [4,56,32,54,22]
 // ]
+
+
 // let result = [];
 // let top = 0;
 // let bottom = mat.length - 1;
 // let left = 0;
 // let right = mat[0].length - 1;
 
-// while (top <= bottom) {
+// while (top <= bottom && left <= right) {
 
 //     // left to right
 //     for (let k = left; k <= right; k++) {
-//         result.push(mat[top][k]);
+//         console.log(mat[top][k]);
 //     }
 //     top++;
 
-//     // right to left
-//     if (top <= bottom) {
-//         for (let k = right; k >= left; k--) {
-//             result.push(mat[top][k]);
-//         }
-//         top++;
+//     // top to bottom
+//     for (let k = top; k <= bottom; k++) {
+//         console.log(mat[k][right]);
 //     }
+//     right--;
+
+//     // right to left
+//     for (let k = right; k >= left; k--) {
+//         console.log(mat[bottom][k]);
+//     }
+//     bottom--;
+
+//     // bottom to top
+//     for (let k = bottom; k >= top; k--) {
+//         console.log(mat[k][left]);
+//     }
+//     left++;
 // }
 
+// zig zag matrix
+
+// let mat = [
+//     [7, 2, 3, 6],
+//     [2, 3, 4, 8],
+//     [5, 6, 1, 7],
+//     [4, 9, 7, 5]
+// ];
+// let result = [];
+// for (let row = 0; row < mat.length; row++) {
+//     if (row % 2 == 0) {
+//         // left to right
+//         for (let col = 0; col < mat[row].length; col++) {
+//             result.push(mat[row][col]);
+//         }
+//     } else {
+//         // right to left
+//         for (let col = mat[row].length - 1; col >= 0; col--) {
+//             result.push(mat[row][col]);
+//         }
+//     }
+// }
 // console.log(result.join(" "));
 
 
+// 90 degree  matrix rotation  for clockwise 
 
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
+// let result = [];
+// for (let col = 0; col < matrix[0].length; col++) {
+//     let rowResult = [];
+//     for (let row = matrix.length - 1; row >= 0; row--) {
+//         rowResult.push(matrix[row][col]);
+//     }
+//     result.push(rowResult);
+// }
+// console.log(result);
+
+// 90 degree roation for anticlockwise 
+
+// let mat = [
+//     [7, 2, 3],
+//     [2, 3, 4],
+//     [5, 6, 1]
+// ];
+
+// let result = [];
+
+// for (let col = mat[0].length - 1; col >= 0; col--) {
+
+//     let rowResult = [];
+
+//     for (let row = 0; row < mat.length; row++) {
+//         rowResult.push(mat[row][col]);
+//     }
+
+//     result.push(rowResult);
+// }
+
+// for (let row = 0; row < result.length; row++) {
+//     console.log(result[row].join(" "));
+// }
