@@ -14,17 +14,18 @@
 //  print(5);
 
  // print sum of n 
-//  function total(n,sum){
+//  function total(n){
 //     if(n==0){
 //         return;
 //  }
-//  //console.log(n);
-//  sum +=n;
-//  total(n-1, sum);
+// return n+total(n-1);
 //  }
-//  total(5,0);
- //  find the factorial of a number using recursion
- 
+//  console.log(total(5));
+// time complexity -> o(n)
+// space complexity -> o(n)
+
+
+//  find the factorial of a number using recursion
 //  let n =5;
 //  function factorial(fact,n){
 //     if(n==1){
@@ -46,14 +47,105 @@
 //  }
 // console.log(Sumofdigits(n));
  //approachh 2
-let n =1234;
-function sumOfDigits(n, sum){
-    if(n==0){
-        console.log(sum);
+// let n =1234;
+// function sumOfDigits(n, sum){
+//     if(n==0){
+//         console.log(sum);
+//         return;
+//     }
+//     sum+=n%10;
+//     sumOfDigits(Math.floor(n/10),sum);
+// }
+// sumOfDigits(n,0);
+
+ //time complexity -> o(log10(n))
+ // space complexity -> o(log10(n))
+
+ // find the maximum item of array by using recursion 
+ //approach 2
+ //let arr=[1,2,8,4,5,87];
+// function findMax(arr,i,ans){
+//     if(i==arr.length){
+//         console.log(ans);
+//         return;
+//     }
+//     if(arr[i]>ans)
+//         ans=arr[i];
+//     findMax(arr, i+1, ans);
+// }
+// findMax(arr,0,-Infinity);
+
+
+// approach 3
+// function findMax(arr,i,ans){
+//     if(i==arr.length){
+//         return ans;
+//     }
+//     if(arr[i]>ans)
+//         ans=arr[i];
+//     return findMax(arr,i+1, ans);
+// }
+// console.log(findMax(arr,0,-Infinity));
+// time complexity -> o(n)
+// space complexity -> o(n)
+
+// check if an array is sorted or not by using recursion and return true and false 
+// when sorted ture and when not sorted return false 
+// function isSorted(arr, i = 0) {
+//     if (i >= arr.length - 1) {
+//         return true;
+//     }
+//     if(arr[i]>arr[i+1]){
+//         return false;
+//     }
+//     return isSorted(arr, i+1);
+// }
+// console.log(isSorted([1,2,3,4]));
+// approach 2
+// let arr =[1,2,3,4,6];
+// function isSorted(arr,i){
+//     if(i==arr.length)
+//         return true;
+//     if(arr[i]<arr[i-1])
+//         return false;
+//     return isSorted(arr, i+1);
+// }
+// console.log(isSorted(arr,1));
+
+// check if a string is palindrome or not using recursion 
+// let str = "rar";
+// function isPalindrome(str,left ,right){
+//  if(right<left)
+//     return true;
+// if(str[left]!==str[right]){
+//     return false;
+// }
+// return isPalindrome(str,left+1,right-1);
+// }
+// console.log(isPalindrome(str,0,str.length-1));
+// find the prime number from 1 to n using recursion 
+let n =20;
+function isPrime(number, divisor = 2) {
+    if (number < 2) {
+        return false;
+    }
+    if (divisor * divisor > number) {
+        return true;
+    }
+    if (number % divisor === 0) {
+        return false;
+    }
+    return isPrime(number, divisor + 1);
+}
+
+function findPrime(number, limit) {
+    if (number > limit) {
         return;
     }
-    sum+=n%10;
-    sumOfDigits(Math.floor(n/10),sum);
+    if (isPrime(number)) {
+        console.log(number);
+    }
+    findPrime(number + 1, limit);
 }
-sumOfDigits(n,0);
- 
+
+findPrime(1, n);
