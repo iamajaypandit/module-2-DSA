@@ -210,10 +210,7 @@
 //     }
 // }
 // console.log(result.join(" "));
-
-
 // 90 degree  matrix rotation  for clockwise 
-
 // let matrix = [
 //     [1, 2, 3],
 //     [4, 5, 6],
@@ -228,9 +225,7 @@
 //     result.push(rowResult);
 // }
 // console.log(result);
-
 // 90 degree roation for anticlockwise 
-
 // let mat = [
 //     [7, 2, 3],
 //     [2, 3, 4],
@@ -253,3 +248,5 @@
 // for (let row = 0; row < result.length; row++) {
 //     console.log(result[row].join(" "));
 // }
+
+

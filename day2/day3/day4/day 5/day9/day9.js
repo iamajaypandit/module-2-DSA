@@ -1,10 +1,8 @@
- // Recursion - function call itself
- // tail
- //head 
- //tree
-
- // head recursion
-
+// Recursion - function call itself
+// tail
+//head 
+//tree
+// head recursion
 //  function print(sum){
 //     if(n==0)
 //     return;
@@ -12,8 +10,7 @@
 // console.log(n);
 //  }
 //  print(5);
-
- // print sum of n 
+// print sum of n 
 //  function total(n){
 //     if(n==0){
 //         return;
@@ -23,8 +20,6 @@
 //  console.log(total(5));
 // time complexity -> o(n)
 // space complexity -> o(n)
-
-
 //  find the factorial of a number using recursion
 //  let n =5;
 //  function factorial(fact,n){
@@ -35,9 +30,8 @@
 //     fact*=n;
 //     factorial(fact,n-1);
 //  }
- //factorial(1,5);
-
- // find the sum of digits 
+//factorial(1,5);
+// find the sum of digits 
 //  let n =121;
 //  function Sumofdigits(n,sum){
 //      if(n==0){
@@ -57,7 +51,6 @@
 //     sumOfDigits(Math.floor(n/10),sum);
 // }
 // sumOfDigits(n,0);
-
  //time complexity -> o(log10(n))
  // space complexity -> o(log10(n))
 
@@ -124,28 +117,79 @@
 // }
 // console.log(isPalindrome(str,0,str.length-1));
 // find the prime number from 1 to n using recursion 
-let n =20;
-function isPrime(number, divisor = 2) {
-    if (number < 2) {
-        return false;
-    }
-    if (divisor * divisor > number) {
-        return true;
-    }
-    if (number % divisor === 0) {
-        return false;
-    }
-    return isPrime(number, divisor + 1);
-}
+// let n =20;
+// function isPrime(number, divisor = 2) {
+//     if (number < 2) {
+//         return false;
+//     }
+//     if (divisor * divisor > number) {
+//         return true;
+//     }
+//     if (number % divisor === 0) {
+//         return false;
+//     }
+//     return isPrime(number, divisor + 1);
+// }
 
-function findPrime(number, limit) {
-    if (number > limit) {
-        return;
-    }
-    if (isPrime(number)) {
-        console.log(number);
-    }
-    findPrime(number + 1, limit);
-}
+// function findPrime(number, limit) {
+//     if (number > limit) {
+//         return;
+//     }
+//     if (isPrime(number)) {
+//         console.log(number);
+//     }
+//     findPrime(number + 1, limit);
+// }
 
-findPrime(1, n);
+// findPrime(1, n);
+
+// printing decending order from n to 1
+
+// function Dec(n){
+//     if(n==1){
+//         return;
+// }
+//  console.log(n);
+//     Dec(n-1);
+// }
+// Dec(10);
+
+// increasing order 
+// function Inc(n){
+//     if(n==0){
+//         return;
+//     }
+//     Inc(n-1);
+//     console.log(n);
+// }
+// Inc(10);
+
+//  let n =5;
+//  function factorial(fact,n){
+//     if(n==0){
+//         console.log(fact);
+//         return;
+//     }
+//     fact*=n;
+//     factorial(fact,n-1);
+//  }
+//  factorial(1,5);
+ // print sum of n 
+//  function total(n){
+//     if(n==1){
+//         return 1;
+//  }
+// return n+total(n-1);
+//  }
+//  console.log(total(5));
+
+// printing fibonacci series
+// function fib(n,a =0,b =1){
+//     if(n<=1){
+//         return n;
+//     }
+//     return fib(n-1) + (n-2);
+// }
+// console.log(fib(6));
+
+// 
