@@ -54,6 +54,8 @@
  //time complexity -> o(log10(n))
  // space complexity -> o(log10(n))
 
+const { reverse, arr } = require("./day10");
+
  // find the maximum item of array by using recursion 
  //approach 2
  //let arr=[1,2,8,4,5,87];
@@ -191,5 +193,3 @@
 //     return fib(n-1) + (n-2);
 // }
 // console.log(fib(6));
-
-// 
