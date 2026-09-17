@@ -226,27 +226,27 @@
 // }
 // console.log(result);
 // 90 degree roation for anticlockwise 
-// let mat = [
-//     [7, 2, 3],
-//     [2, 3, 4],
-//     [5, 6, 1]
-// ];
+let mat = [
+    [7, 2, 3],
+    [2, 3, 4],
+    [5, 6, 1]
+];
 
-// let result = [];
+let result = [];
 
-// for (let col = mat[0].length - 1; col >= 0; col--) {
+for (let col = mat[0].length - 1; col >= 0; col--) {
 
-//     let rowResult = [];
+    let rowResult = [];
 
-//     for (let row = 0; row < mat.length; row++) {
-//         rowResult.push(mat[row][col]);
-//     }
+    for (let row = 0; row < mat.length; row++) {
+        rowResult.push(mat[row][col]);
+    }
 
-//     result.push(rowResult);
-// }
+    result.push(rowResult);
+}
 
-// for (let row = 0; row < result.length; row++) {
-//     console.log(result[row].join(" "));
-// }
+for (let row = 0; row < result.length; row++) {
+    console.log(result[row].join(" "));
+}
 
 
