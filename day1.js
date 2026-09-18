@@ -18,12 +18,12 @@
  //*****
  //*****
  //*****
-let n =5;
-let str ="";
-for(let i =1; i<=n; i++){
-    str+="*";
-    console.log(str);
-}
+// let n =5;
+// let str ="";
+// for(let i =1; i<=n; i++){
+//     str+="*";
+//     console.log(str);
+// }
 
 // let n = 5;
 // for(let row=1; row<=n; row++){
@@ -91,3 +91,25 @@ for(let i =1; i<=n; i++){
 // console.log(str);
 // }
 
+let n = 5;
+
+for (let i = 1; i <= n; i++) {
+    let alphabet = "";
+
+    // Spaces
+    for (let j = 1; j <= n - i; j++) {
+        alphabet += " ";
+    }
+
+    // Increasing
+    for (let j = 1; j <= i; j++) {
+        alphabet += String.fromCharCode(64 + j);
+    }
+
+    // Decreasing
+    for (let j = i - 1; j >= 1; j--) {
+        alphabet += String.fromCharCode(64 + j);
+    }
+
+    console.log(alphabet);
+}

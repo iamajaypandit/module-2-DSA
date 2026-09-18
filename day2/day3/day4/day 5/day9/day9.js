@@ -193,3 +193,25 @@ const { reverse, arr } = require("./day10");
 //     return fib(n-1) + (n-2);
 // }
 // console.log(fib(6));
+
+// const reverseArray = (arr, n, ans) => {
+//     if (n < 0) {
+//         console.log(ans.join(","));
+//         return;
+//     }
+//     ans.push(arr[n]);
+//     return reverseArray(arr, n - 1, ans);
+// }
+// let arr = [1,5,3,4,5];
+// reverseArray(arr,arr.length-1,[]);
+
+
+function printArrayRecursive(arr, i, n) {
+  if(i==n){
+    console.log(arr.join(" "));
+    return;
+  }
+  printArrayRecursive(arr,i+1,n);
+}
+let arr = [1,2,3,4];
+printArrayRecursive(arr,0,arr.length);
