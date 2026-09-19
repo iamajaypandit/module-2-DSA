@@ -215,3 +215,21 @@ function printArrayRecursive(arr, i, n) {
 }
 let arr = [1,2,3,4];
 printArrayRecursive(arr,0,arr.length);
+
+// remove duplicates questions 
+var removeDuplicates = function(nums) {
+
+    let k = 1;
+
+    for (let i = 1; i < nums.length; i++) {
+
+        if (nums[i] != nums[i - 1]) {
+
+            nums[k] = nums[i];
+
+            k++;
+        }
+    }
+
+    return k;
+};
