@@ -113,3 +113,55 @@ for (let i = 1; i <= n; i++) {
 
     console.log(alphabet);
 }
+
+
+function butterflyPattern(n){
+    // Upper Half
+    for (let i = 1; i <= n; i++) {
+        let star = "";
+
+        // 1st part
+        for (let j = 1; j <= i; j++) {
+            star += "*";
+        }
+
+        // spaces
+        let space = 2 * (n - i);
+        for (let j = 1; j <= space; j++) {
+           star += " ";
+        }
+
+        // 2nd part
+        for (let j = 1; j <= i; j++) {
+            star += "*";
+        }
+
+        console.log(star);
+    }
+
+    // Lower Half
+    for (let i = n; i >= 1; i--) {
+        let star = "";
+
+        // 1st part
+        for (let j = 1; j <= i; j++) {
+            star += "*";
+        }
+
+        // spaces
+        let space = 2 * (n - i);
+        for (let j = 1; j <= space; j++) {
+            star += " ";
+        }
+
+        // 2nd part
+        for (let j = 1; j <= i; j++) {
+            star += "*";
+        }
+
+        console.log(star);
+    }
+}
+
+butterflyPattern(4);
+
