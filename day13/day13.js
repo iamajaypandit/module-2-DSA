@@ -222,23 +222,227 @@
 // q5:- return an array consiting of details of only those student who 
 // is greater than 20;
 
-let students = [
-    {
-        name: "Akash",
-        score: 40,
-        age: 20,
-    },
-    {
-        name: "Vikas",
-        score: 20,
-        age: 30,
-    },
-    {
-        name: "Suyash",
-        score: 50,
-        age: 50,
-    }
-]
+// let students = [
+//     {
+//         name: "Akash",
+//         score: 40,
+//         age: 20,
+//     },
+//     {
+//         name: "Vikas",
+//         score: 20,
+//         age: 30,
+//     },
+//     {
+//         name: "Suyash",
+//         score: 50,
+//         age: 50,
+//     }
+// ]
 
-let transformedData = students.filter((student)=>student.age>20);
-console.log(transformedData);
+// let transformedData = students.filter((student)=>student.age>20);
+// console.log(transformedData);
+
+
+// const employees = [
+//   {
+//     employeeId: "EMP001",
+//     name: "Aarav Sharma",
+//     gender: "Male",
+//     department: "IT",
+//     jobTitle: "Software Engineer",
+//     location: "Pune",
+//     salary: 850000,
+//     joiningDate: "2022-06-15",
+//     experience: 4,
+//     status: "Active"
+//   },
+//   {
+//     employeeId: "EMP002",
+//     name: "Ananya Patel",
+//     gender: "Female",
+//     department: "HR",
+//     jobTitle: "HR Executive",
+//     location: "Mumbai",
+//     salary: 650000,
+//     joiningDate: "2023-01-10",
+//     experience: 3,
+//     status: "Active"
+//   },
+//   {
+//     employeeId: "EMP003",
+//     name: "Rohan Mehta",
+//     gender: "Male",
+//     department: "Finance",
+//     jobTitle: "Financial Analyst",
+//     location: "Pune",
+//     salary: 780000,
+//     joiningDate: "2021-08-22",
+//     experience: 5,
+//     status: "Active"
+//   },
+//   {
+//     employeeId: "EMP004",
+//     name: "Priya Singh",
+//     gender: "Female",
+//     department: "IT",
+//     jobTitle: "Senior Software Engineer",
+//     location: "Bangalore",
+//     salary: 1250000,
+//     joiningDate: "2020-03-18",
+//     experience: 6,
+//     status: "Active"
+//   },
+//   {
+//     employeeId: "EMP005",
+//     name: "Kabir Joshi",
+//     gender: "Male",
+//     department: "Sales",
+//     jobTitle: "Sales Executive",
+//     location: "Delhi",
+//     salary: 720000,
+//     joiningDate: "2023-07-05",
+//     experience: 3,
+//     status: "Active"
+//   },
+// ];
+
+// return a new array cnsisting of emploee details whose salary is greater 100000
+//let filtereddata = employees.filter((employee)=> employee.salary>100000)
+//console.log(filtereddata);
+
+// return a neew array consisting of employees names whose salary is greater 100000
+//   let filtereddata = employees.filter((employee) => employee.salary > 100000)
+//   let names = filteredname.map((employee)=> employee.name);
+//   console.log(names);
+
+
+// reduce
+// let arr = [4,5,6,7,8];
+// function callback(accum,curr){
+//     console.log(accum,curr);
+//     return curr*accum;
+// }
+// let finalValue = arr.reduce(callback,1);
+// console.log(finalValue);
+
+// // approach 2
+// function product(accum,curr){
+//     return accum*curr;
+// }
+// let mul = arr.reduce(product,1);
+// console.log(mul);
+
+// find total salary of the employees
+const employees = [
+  {
+    employeeId: "EMP001",
+    name: "Aarav Sharma",
+    gender: "Male",
+    department: "IT",
+    jobTitle: "Software Engineer",
+    location: "Pune",
+    salary: 850000,
+    joiningDate: "2022-06-15",
+    experience: 4,
+    status: "Active"
+  },
+  {
+    employeeId: "EMP002",
+    name: "Ananya Patel",
+    gender: "Female",
+    department: "HR",
+    jobTitle: "HR Executive",
+    location: "Mumbai",
+    salary: 650000,
+    joiningDate: "2023-01-10",
+    experience: 3,
+    status: "Active"
+  },
+  {
+    employeeId: "EMP003",
+    name: "Rohan Mehta",
+    gender: "Male",
+    department: "Finance",
+    jobTitle: "Financial Analyst",
+    location: "Pune",
+    salary: 780000,
+    joiningDate: "2021-08-22",
+    experience: 5,
+    status: "Active"
+  },
+  {
+    employeeId: "EMP004",
+    name: "Priya Singh",
+    gender: "Female",
+    department: "IT",
+    jobTitle: "Senior Software Engineer",
+    location: "Bangalore",
+    salary: 1250000,
+    joiningDate: "2020-03-18",
+    experience: 6,
+    status: "Active"
+  },
+  {
+    employeeId: "EMP005",
+    name: "Kabir Joshi",
+    gender: "Male",
+    department: "Sales",
+    jobTitle: "Sales Executive",
+    location: "Delhi",
+    salary: 720000,
+    joiningDate: "2023-07-05",
+    experience: 3,
+    status: "Active"
+  },
+];
+
+// find total salary of the employees
+// function totalSalary(accum,curr){
+//     return accum+curr;
+// }
+// let totalSalary = employees.reduce(sum,0);
+// console.log(sum);
+
+// function totalsalary(accum,curr){
+//    return  accum+curr.salary
+// }
+// let totalsalary = employees.reduce(totalsalary,0);
+// console.log(totalsalary);
+// find the no of employees in IT department
+// const noOfITEmployees = employees.reduce((count, employee) => {
+//   return employee.department === "IT" ? count + 1 : count;
+// }, 0);
+
+// console.log("Number of employees in IT department:", noOfITEmployees);
+
+//
+// function employeesInIT(count,curr){
+//     count++;
+//     return count;
+// }
+// let total = employees.reduce(employeesInIT,0);
+// console.log(total);
+
+// find the number of employes working in pune
+// function employeesInPune(count,curr){
+// if(curr.location=="Pune")
+//       count++;
+//     return count;
+// }
+// let total =  employees.reduce(employeesInPune,0);
+// console.log(total);
+
+// find the name of all the employees who is working in pune
+const delhiEmployees = employees.reduce((names, employee) => {
+  if (employee.location === "Delhi") {
+    names.push(employee.name);
+  }
+  return names;
+}, []);
+
+console.log(delhiEmployees);
+
+// let filteredname=employeesmap((employee)=>employee.location="Delhi");
+// let names = filteredname.map((employee)=>employee.name);
+// console.log(employees);
